@@ -7,7 +7,7 @@ const fileName = "README"
 const fileExt = ".md"
 
 //array of questions
-const questions = [
+const questions = ([
     {
         type: 'input',
         message: 'What is your READMEs title?',
@@ -62,7 +62,7 @@ const questions = [
         message: 'What is your email address?',
         name: 'email'
     }
-]
+])
 // write a readme in a markdown file as a template
 
 // TODO: function that will generate my readme template
@@ -90,18 +90,18 @@ inquirer.prompt(questions).then(function(response) {
 // TODO: write file using template generated from readme function
 
 
-// const writeToFile = function(fileName, fileExt, content, overwrite=false) {
-//     if(!fs.existsSync('./output')){
-//         fs.mkdirSync('output')
-//     }
-//     let filePath = "./output/"+fileName+fileExt;
-//     if(!overwrite && fs.existsSync(filePath)){
-//         let counter = 1
-//         do{
-//             filePath = "./output/"+fileName+counter+fileExt;
-//             counter++
-//         } while(fs.existsSync(filePath));
-//     }
-//     fs.writeFileSync(filePath,content,"utf8");
+const writeToFile = function(fileName, fileExt, content, overwrite=false) {
+    if(!fs.existsSync('./output')){
+        fs.mkdirSync('output')
+    }
+    let filePath = "./output/"+fileName+fileExt;
+    if(!overwrite && fs.existsSync(filePath)){
+        let counter = 1
+        do{
+            filePath = "./output/"+fileName+counter+fileExt;
+            counter++
+        } while(fs.existsSync(filePath));
+    }
+    fs.writeFileSync(filePath,content,"utf8");
 // }    
 // prompt user if they would like to overwrite file if no file exists don't prompt.
