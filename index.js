@@ -21,28 +21,36 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'Provice installation instructions.',
+        message: 'How do you install your application?',
         name: 'installation'
     },
     {
         type: 'input',
-        message: 'What are the uses for your application?',
+        message: 'How do you use your application? Please provide examples.',
         name: "usage"
     },
     {
         type: 'list',
         message: 'Choose a license for your application.',
         name: 'license',
-        choices: []
+        choices: [
+            'Apache',
+            'Cloud Native Computing Foundation',
+            'GNU',
+            'NPM Packages',
+            'OpenBSD',
+            'Rust',
+            'WordPress'
+        ]
     },
     {
         type: 'input',
-        message: 'Who contributed to this application?',
+        message: 'Who contributed to this project?',
         name: 'contributing'
     },
     {
         type: 'input',
-        message: 'test?',
+        message: 'Please provide tests for your application',
         name: 'tests'
     },
     {
