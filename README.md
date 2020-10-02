@@ -1,44 +1,42 @@
-# readmeGenerator
+# README
 
-# sean
+## Description
+    
+This is a test of my read me!
+    
+## Badges
+    
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
-    ## Description
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)
     
-    stuff
+## installation
     
-    ## Badges
+By installing it dummy!
     
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Usage
+    
+by using it stupid.
+    
+## License
+    
+Mozilla
+    
+## Contributing
+    
+me
+    
+## Tests
+    
+stuff
+    
+## Questions
 
-    ## Table of Contents
-    1. [Installation](#installation)
-    2. [Usage](#usage)
-    3. [License](#license)
-    4. [Contributing](#contributing)
-    5. [Tests](#tests)
-    6. [Questions](#questions)
-    
-    ## installation
-    
-    things
-    
-    ## Usage
-    
-    why?
-    
-    ## License
-    
-    MIT
-    
-    ## Contributing
-    
-    Me
-    
-    ## Tests
-    
-    no
-    
-    ## Questions
-    
-    Github: shut up.
-    email: Cobra Kai Never Dies
+Github: me
+email: me@me.me

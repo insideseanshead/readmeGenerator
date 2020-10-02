@@ -34,13 +34,21 @@ const questions = [
         name: 'license',
         choices: [
             'Apache',
-            'Cloud Native Computing Foundation',
+            'Boost',
+            'BSD',
+            'Creative Commons',
+            'Eclipse',
             'GNU',
+            'IBM',
+            'ISC',
             'MIT',
-            'NPM Packages',
-            'OpenBSD',
-            'Rust',
-            'WordPress'
+            'Mozilla',
+            'Open Data Commons',
+            'Perl',
+            'SIL',
+            'Unlicense',
+            'WTFPL',
+            'Zlib'
         ]
     },
     {
@@ -72,54 +80,84 @@ const questions = [
 inquirer.prompt(questions).then(response => {
     console.log(response)
 
-    if(response.license === 'MIT'){
+    if(response.license === 'Apache'){
+        badges = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+    } else if(response.license === 'Boost'){
+        badges = `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`
+    } else if(response.license === 'BSD'){
+        badges = `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`
+    } else if(response.license === 'Creative Commons'){
+        badges = `[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)`
+    } else if(response.license === 'Eclipse'){
+        badges = `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
+    } else if(response.license === 'GNU'){
+        badges = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+    } else if(response.license === 'IBM'){
+        badges = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`
+    } else if(response.license === 'ISC'){
+        badges = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
+    } else if(response.license === 'MIT'){
         badges = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+    } else if(response.license === 'Mozilla'){
+        badges = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+    } else if(response.license === 'Open Data Commons'){
+        badges = `[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)`
+    } else if(response.license === 'Perl'){
+        badges = `[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)`
+    } else if(response.license === 'SIL'){
+        badges = `[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL%201.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)`
+    } else if(response.license === 'Unlicense'){
+        badges = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+    } else if(response.license === 'WTFPL'){
+        badges = `[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)`
+    } else if (response.license === 'Zlib'){
+        badges = `[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)`
     }
 
-    let profile = `# ${response.title}
+let profile = `# ${response.title}
 
-    ## Description
+## Description
     
-    ${response.description}
+${response.description}
     
-    ## Badges
+## Badges
     
-    ${badges}
+${badges}
 
-    ## Table of Contents
-    1. [Installation](#installation)
-    2. [Usage](#usage)
-    3. [License](#license)
-    4. [Contributing](#contributing)
-    5. [Tests](#tests)
-    6. [Questions](#questions)
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions)
     
-    ## installation
+## installation
     
-    ${response.installation}
+${response.installation}
     
-    ## Usage
+## Usage
     
-    ${response.usage}
+${response.usage}
     
-    ## License
+## License
     
-    ${response.license}
+${response.license}
     
-    ## Contributing
+## Contributing
     
-    ${response.contributing}
+${response.contributing}
     
-    ## Tests
+## Tests
     
-    ${response.tests}
+${response.tests}
     
-    ## Questions
-    
-    Github: ${response.github}
-    email: ${response.email}`
+## Questions
 
-    fs.writeFile(response.title + '.md',profile, (err) => {if(err) {throw err}})
+Github: ${response.github}
+email: ${response.email}`
+
+fs.writeFile(response.title + '.md',profile, (err) => {if(err) {throw err}})
 })
 
     
