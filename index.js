@@ -5,7 +5,7 @@ const inquirer = require("inquirer");
 
 const fileName = "README"
 const fileExt = ".md"
-
+let badges = ""
 //array of questions
 const questions = [
     {
@@ -36,6 +36,7 @@ const questions = [
             'Apache',
             'Cloud Native Computing Foundation',
             'GNU',
+            'MIT',
             'NPM Packages',
             'OpenBSD',
             'Rust',
@@ -71,6 +72,10 @@ const questions = [
 inquirer.prompt(questions).then(response => {
     console.log(response)
 
+    if(response.license === 'MIT'){
+        badges = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+    }
+
     let profile = `# ${response.title}
 
     ## Description
@@ -79,6 +84,8 @@ inquirer.prompt(questions).then(response => {
     
     ## Badges
     
+    ${badges}
+
     ## Table of Contents
     1. [Installation](#installation)
     2. [Usage](#usage)

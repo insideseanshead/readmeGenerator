@@ -1,5 +1,3 @@
-# readmeGenerator
-
 # sean
 
     ## Description
