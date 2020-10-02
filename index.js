@@ -7,7 +7,7 @@ const fileName = "README"
 const fileExt = ".md"
 
 //array of questions
-const questions = ([
+const questions = [
     {
         type: 'input',
         message: 'What is your READMEs title?',
@@ -49,7 +49,7 @@ const questions = ([
     },
     {
         type: 'input',
-        message: 'Please provide tests for your application',
+        message: 'Please provide tests for your application.',
         name: 'tests'
     },
     {
@@ -62,46 +62,79 @@ const questions = ([
         message: 'What is your email address?',
         name: 'email'
     }
-])
+]
 // write a readme in a markdown file as a template
 
 // TODO: function that will generate my readme template
 
 // TODO: use inquirer to prompt user with questions
-inquirer.prompt(questions).then(function(response) {
+inquirer.prompt(questions).then(response => {
+    console.log(response)
 
-    //push answers into an object array that can then be used to make the read me.
+    let profile = `# ${response.title}
 
+    ## Description
+    
+    ${response.description}
+    
+    ## Badges
+    
+    ## Table of Contents
+    1. [Installation](#installation)
+    2. [Usage](#usage)
+    3. [License](#license)
+    4. [Contributing](#contributing)
+    5. [Tests](#tests)
+    6. [Questions](#questions)
+    
+    ## installation
+    
+    ${response.installation}
+    
+    ## Usage
+    
+    ${response.usage}
+    
+    ## License
+    
+    ${response.license}
+    
+    ## Contributing
+    
+    ${response.contributing}
+    
+    ## Tests
+    
+    ${response.tests}
+    
+    ## Questions
+    
+    Github: ${response.github}
+    email: ${response.email}`
 
-
-    // let filename = response.title.toLowerCase().split(' ').join('')+'.json';
-
-    // fs.writeFile(filename, JSON.stringify(response, null, '\t'), function(err) {
-    //     if (err) {
-    //         return console.log('err');
-    //     }
-
-    //     console.log("Sucess")
-    // })
-
+    fs.writeFile(response.title + '.md',profile, (err) => {if(err) {throw err}})
 })
+
+    
+
+
 // TODO: use answers that come back from inquirer - pass those into my generate readme function
 
 // TODO: write file using template generated from readme function
 
 
-const writeToFile = function(fileName, fileExt, content, overwrite=false) {
-    if(!fs.existsSync('./output')){
-        fs.mkdirSync('output')
-    }
-    let filePath = "./output/"+fileName+fileExt;
-    if(!overwrite && fs.existsSync(filePath)){
-        let counter = 1
-        do{
-            filePath = "./output/"+fileName+counter+fileExt;
-            counter++
-        } while(fs.existsSync(filePath));
-    }
-    fs.writeFileSync(filePath,content,"utf8");
+// const writeToFile = function(fileName, fileExt, content, overwrite=false) {
+//     if(!fs.existsSync('./output')){
+//         fs.mkdirSync('output')
+//     }
+//     let filePath = "./output/"+fileName+fileExt;
+//     if(!overwrite && fs.existsSync(filePath)){
+//         let counter = 1
+//         do{
+//             filePath = "./output/"+fileName+counter+fileExt;
+//             counter++
+//         } while(fs.existsSync(filePath));
+//     }
+//     fs.writeFileSync(filePath,content,"utf8");
 // }    
 // prompt user if they would like to overwrite file if no file exists don't prompt.
