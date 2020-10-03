@@ -17,7 +17,9 @@ This Application takes in user inputs in the terminal and outputs a readme for g
 ## installation
     
 Simply clone the repo and use npm install to install the npm modules for inquirer.
-    
+
+![install image](assets/install.PNG)
+
 ## Usage
     
 Run the application with node index.js or npm start. Then in turn answer the prompts given in your terminal. When complete the app will return to the user a professional read me file.
@@ -33,6 +35,8 @@ Asisted by Wesley Clements
 ## Tests
     
 Simply run in your terminal to test and output a file that returns in github mark down language.
+
+[test video](https://drive.google.com/file/d/1FtQsAiQPUTUG05FJVAsrkvxr4KWevaam/view)
     
 ## Questions
 
