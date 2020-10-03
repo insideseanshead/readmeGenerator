@@ -1,0 +1,82 @@
+{
+  "Apache": {
+    "text": "Apache%202.0",
+    "color": "blue",
+    "link": "https://opensource.org/licenses/Apache-2.0"
+  },
+  "Boost": {
+    "text": "Boost%201.0",
+    "color": "lightblue",
+    "link": "https://www.boost.org/LICENSE_1_0.txt"
+  },
+  "BSD": {
+    "text": "BSD%203--Clause",
+    "color": "blue",
+    "link": "https://opensource.org/licenses/BSD-3-Clause"
+  },
+  "Creative Commons": {
+    "text": "CC0%201.0",
+    "color": "lightgrey",
+    "link": "http://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "Eclipse": {
+    "text": "EPL%201.0",
+    "color": "red",
+    "link": "https://opensource.org/licenses/EPL-1.0"
+  },
+  "GNU": {
+    "text": "GPLv3",
+    "color": "blue",
+    "link": "https://www.gnu.org/licenses/gpl-3.0"
+  },
+  "IBM": {
+    "text": "IPL%201.0",
+    "color": "blue",
+    "link": "https://opensource.org/licenses/IPL-1.0"
+  },
+  "ISC": {
+    "text": "ISC",
+    "color": "blue",
+    "link": "https://opensource.org/licenses/ISC"
+  },
+  "MIT": {
+    "text": "MIT",
+    "color": "yellow",
+    "link": "https://opensource.org/licenses/MIT"
+  },
+  "Mozilla": {
+    "text": "MPL%202.0",
+    "color": "brightgreen",
+    "link": "https://opensource.org/licenses/MPL-2.0"
+  },
+  "Open Data Commons": {
+    "text": "ODC_BY",
+    "color": "brightgreen",
+    "link": "https://opendatacommons.org/licenses/by/"
+  },
+  "Perl": {
+    "text": "Perl-0298c3",
+    "color": "blue",
+    "link": "https://opensource.org/licenses/Artistic-2.0"
+  },
+  "SIL": {
+    "text": "OFL%201.1",
+    "color": "lightgreen",
+    "link": "https://opensource.org/licenses/OFL-1.1"
+  },
+  "Unlicense": {
+    "text": "Unlicense",
+    "color": "blue",
+    "link": "http://unlicense.org/"
+  },
+  "WTFPL": {
+    "text": "WTFPL",
+    "color": "brightgreen",
+    "link": "http://www.wtfpl.net/about/"
+  },
+  "Zlib": {
+    "text": "Zlib",
+    "color": "lightgrey",
+    "link": "https://opensource.org/licenses/Zlib"
+  }
+}
